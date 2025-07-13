@@ -15,12 +15,15 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
+        <form id="weather-search-engine">
           <input
             type="search"
             placeholder="Enter a city.."
+            autocomplete="off"
+            autofocus="on"
             required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>

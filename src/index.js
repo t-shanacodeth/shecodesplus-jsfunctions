@@ -23,3 +23,26 @@ function setDateTime() {
 setDateTime();
 
 // Feature 2
+
+function displayCurrentCity(event) {
+  event.preventDefault();
+
+  const searchInput = document.querySelector("#search-input");
+  console.log(searchInput);
+  const currentCity = document.querySelector("h1");
+
+  if (searchInput.value) {
+    currentCity.innerHTML = `${searchInput.value}`;
+  } else {
+    searchInput.value = null;
+    alert("Error! Please enter a city.");
+  }
+}
+
+const weatherSearchForm = document.getElementById("weather-search-engine");
+console.log(weatherSearchForm);
+weatherSearchForm.addEventListener("submit", displayCurrentCity);
+
+const searchButton = document.querySelector(".search-button");
+console.log(searchButton);
+searchButton.addEventListener("click", displayCurrentCity);
