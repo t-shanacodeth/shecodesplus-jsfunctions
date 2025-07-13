@@ -1,4 +1,5 @@
 // Feature 1
+
 function setDateTime() {
   const currentDate = document.getElementById("day-and-time");
   const appDate = new Date();
@@ -13,7 +14,12 @@ function setDateTime() {
     "Saturday",
   ];
   let currentDay = days[appDate.getDay()];
-  console.log(currentDay);
+  let currentHour = appDate.getHours();
+  let currentMinute = appDate.getMinutes();
+
+  currentDate.innerHTML = `${currentDay} ${currentHour}:${currentMinute}`;
 }
 
-// currentDate.innerHTML =
+setDateTime();
+
+// Feature 2
